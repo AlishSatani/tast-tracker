@@ -1,0 +1,16 @@
+query Tasks($offset: Int, $first: Int, $keyword: String) {
+  tasks(
+    offset: $offset
+    first: $first
+    filter: { name: { includesInsensitive: $keyword } }
+    orderBy: NAME_ASC
+  ) {
+    nodes {
+      ...Detail_Task
+    }
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}

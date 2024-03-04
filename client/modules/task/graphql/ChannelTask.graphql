@@ -1,0 +1,6 @@
+query Task($id: UUID!) {
+  task(id: $id) {
+    id
+    ...Detail_Task
+  }
+}

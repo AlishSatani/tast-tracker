@@ -1,0 +1,7 @@
+mutation CreateTask($task: TaskInput!) {
+  createTask(input: { task: $task }) {
+    task {
+      ...Detail_Task
+    }
+  }
+}

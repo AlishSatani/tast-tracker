@@ -1,0 +1,28 @@
+@layer components {
+  .bg-form-input {
+    @apply rounded-xl bg-blue-600/10 border-blue-600;
+  }
+
+    .alert {
+        @apply !text-red-900 !bg-red-100 !border-red-300 !border-[1px] place-self-center;
+    }
+
+  .drop-zone {
+    @apply flex bg-neutral-50 cursor-pointer flex-col w-full border-2 rounded-md border-dashed hover:border-theme p-6 gap-4;
+  }
+
+  .thumb-container {
+    @apply flex flex-wrap my-3 w-full gap-4;
+  }
+
+  .thumb-inner {
+    @apply flex overflow-hidden h-24;
+  }
+
+  .popover {
+    @apply flex flex-col gap-2 p-2.5 divide-y-[1px] after:content-[''] after:absolute after:top-1/2 after:right-[100%] after:-translate-y-1/2 after:border-8 after:border-y-transparent after:border-l-transparent after:border-r-white;
+  }
+  .topic-label {
+    @apply inline-flex bg-white border-[1px] border-blue-600 select-none cursor-pointer rounded-full !px-4 !py-1 font-heading text-sm md:text-base;
+  }
+} ;

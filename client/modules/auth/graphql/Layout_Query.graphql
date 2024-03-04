@@ -1,0 +1,18 @@
+fragment Layout_Query on Query {
+  currentUser {
+    id
+    ...Layout_User
+  }
+}
+
+fragment Layout_User on User {
+  id
+  name
+  isAdmin
+  userEmails {
+    nodes {
+      id
+      email
+    }
+  }
+}

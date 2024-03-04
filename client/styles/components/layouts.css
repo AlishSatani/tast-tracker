@@ -1,0 +1,59 @@
+/**
+* Custom classes for layouts
+*/
+
+@layer components {
+  .header-main {
+    @apply container flex justify-between py-2 items-center max-h-[150px] sm:gap-4 mx-auto;
+  }
+  .header-common {
+    @apply hidden grow lg:block;
+  }
+  .menu-common {
+    @apply !opacity-95 rounded-none w-full;
+  }
+  .drop-menu {
+    @apply flex gap-2 items-center;
+  }
+  .logo {
+    @apply inline-block max-w-[180px] min-w-[100px];
+  }
+  .posts-container {
+    @apply border rounded-md border-slate-300 bg-neutral-50 m-4 p-4 md:max-h-[550px] md:grid md:grid-cols-2 md:grid-rows-6;
+  }
+  
+  .auth-left-container {
+    @apply lg:basis-[calc(50%_-_2rem)] basis-0 hidden lg:flex flex-col justify-end items-center xl:items-start aspect-square;
+  }
+  .auth-right-container {
+    @apply bg-neutral-50/20 rounded-[2.5rem] sm:ring-[1px] ring-neutral-900/20 ring-inset text-center flex flex-col justify-center sm:p-10 lg:px-14 xl:px-20 lg:basis-[calc(50%_+_2rem)] h-auto relative lg-max:mx-auto lg-max:max-w-xl;
+  }
+  .auth-layout {
+    @apply min-h-screen flex flex-col justify-between;
+  }
+  .form-header {
+    @apply md:text-2xl lg:text-3xl font-normal;
+  }
+  .form-sub-header {
+    @apply text-neutral-900/60 font-normal font-heading text-base sm:text-lg capitalize;
+  }
+  .discover-module-heading {
+    @apply underline pr-5 underline-offset-8 decoration-blue-600 text-3xl font-medium mx-6 md:mx-12 my-8 text-center sm:text-left decoration-2;
+  }
+  .event-items {
+    @apply absolute bg-blue-300/50 px-2 py-3 rounded-md;
+  }
+  .unread {
+    @apply inline-block w-3 h-3 bg-theme border-2 border-white rounded-full;
+  }
+}
+
+.auth-background {
+  background: #fafbfc;
+}
+
+@media only screen and (min-width: 1024px) {
+  .auth-background {
+    background: linear-gradient(90deg, #143ee0 50%, #fafbfc 50%);
+  }
+}

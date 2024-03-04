@@ -1,0 +1,5 @@
+mutation DeleteTask($id: UUID!) {
+  deleteTask(input: { id: $id }) {
+    deletedTaskNodeId
+  }
+}

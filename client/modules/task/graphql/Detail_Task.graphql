@@ -1,0 +1,11 @@
+fragment Detail_Task on Task {
+  id
+  name
+  description
+  status
+  userId
+  user {
+    id
+    name
+  }
+}

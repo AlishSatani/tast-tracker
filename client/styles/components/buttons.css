@@ -1,0 +1,19 @@
+@layer base {
+    button {
+        @apply btn;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply font-heading font-medium text-lg p-2 cursor-pointer;
+    }
+
+    .icon-btn {
+        @apply flex gap-4 items-center;
+    }
+
+    .header-btn {
+        @apply rounded-full font-heading font-normal text-lg px-4 md:text-xl py-1 md:px-6 capitalize bg-theme text-neutral-50 hover:text-neutral-50 hover:drop-shadow-[2px_3px_7px_rgba(0,82,204,0.4)];
+    }
+}

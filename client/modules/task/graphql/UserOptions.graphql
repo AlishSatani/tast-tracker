@@ -1,0 +1,17 @@
+query UserOptions($first: Int, $userId: UUID, $term: String) {
+  users(
+    first: $first
+    filter: { id: { ne: $userId }, name: { includesInsensitive: $term } }
+  ) {
+    nodes {
+      id
+      ...Lite_User
+    }
+    pageInfo {
+      endCursor
+      startCursor
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}

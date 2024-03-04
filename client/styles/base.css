@@ -1,0 +1,30 @@
+/**
+* Override base styles
+* font-body: All Paragraph styling
+* font-heading: For Heading and Labels
+*/
+
+@layer base {
+    body {
+        @apply bg-neutral-100 font-body;
+    }
+
+    body * {
+        @apply font-body;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-heading;
+    }
+    a {
+        @apply hover:text-blue-600;
+    }
+    label {
+        @apply after:!border-b-0;
+    }
+}

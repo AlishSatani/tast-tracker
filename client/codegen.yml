@@ -1,0 +1,22 @@
+overwrite: true
+schema: ${NEXT_PUBLIC_API_URL}/graphql
+documents: "./modules/**/*.graphql"
+config:
+  avoidOptionals:
+    field: true
+    inputValue: false
+    object: false
+  scalars:
+    Datetime: "string"
+    JSON: "{ [key: string]: any }"
+  noGraphQLTag: false
+  withHOC: false
+  withComponent: false
+  withHooks: true
+  reactApolloVersion: 3
+generates:
+  generated/graphql/index.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"

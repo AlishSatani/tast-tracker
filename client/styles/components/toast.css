@@ -1,0 +1,5 @@
+@layer components {
+  .toast-notification {
+    @apply !overflow-hidden !ring-1 !ring-black !ring-opacity-5 !m-0 !p-0 !shadow-lg !rounded-lg;
+  }
+}
